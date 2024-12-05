@@ -82,7 +82,7 @@ struct PlayForwardButton: View {
         }
         
         // Анимация с отскоком
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.3)) {
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0.9)) {
            
             // оффсет HStack на размер элемента
             offset = elementWidth
