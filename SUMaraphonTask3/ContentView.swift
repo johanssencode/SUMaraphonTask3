@@ -81,8 +81,8 @@ struct PlayForwardButton: View {
        
         }
         
-        // Можно попробовать другие виды анимаций но .spring(.smooth) смотрится достойно
-        withAnimation(.spring(.smooth)) {
+        // Анимация с отскоком
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.3)) {
            
             // оффсет HStack на размер элемента
             offset = elementWidth
@@ -90,7 +90,7 @@ struct PlayForwardButton: View {
             opacities[0] = 1.0 // Появляется 1 элемент
             scales[0] = 1.0 // Растет 1 элемент
             opacities[2] = 0.0 // Исчезает 3 элемент
-            scales[2] = 0.1 // Уменьшается 3 элемент
+            scales[2] = 0.0 // Уменьшается 3 элемент
           
         }
         
